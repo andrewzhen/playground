@@ -1,0 +1,218 @@
+html {
+  font-size: 16px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+li img {
+  width: 200px;
+  margin-right: 5rem;
+}
+
+button {
+  display: block;
+  margin: 0 auto 10rem;
+}
+
+/********** NBA **********/
+@font-face {
+  font-family: "DIN";
+  src: url("../fonts/DIN-Bold.woff") format("woff");
+}
+
+.container {
+  font-family: "DIN";
+  font-size: 6vw;
+  background-color: #000;
+  color: #fff;
+  width: 100vw;
+  height: 15vw;
+  border-bottom: 10px solid #000;
+}
+
+.container__content {
+  height: inherit;
+  border: 10px solid #303030;
+  border-top: none;
+  box-sizing: border-box;
+}
+
+.container__img {
+  position: relative;
+  pointer-events: none;
+}
+
+.container > *:nth-child(1) {
+  flex: 0 1 6vw;
+}
+
+.container > *:nth-child(2) {
+  flex: 1 1 82vw;
+}
+
+.container > *:nth-child(3) {
+  flex: 0 1 12vw;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nba {
+  background-color: #fff;
+  border: 3px solid #fff;
+  border-radius: 12px;
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+.teams-container {
+  flex: 0 1 60%;
+}
+
+.teams-container > * {
+  flex: 0 1 50%;
+  position: relative;
+}
+
+.team {
+  flex-wrap: wrap;
+  height: 100%;
+  border-bottom: 10px solid #303030;
+  box-sizing: border-box;
+}
+
+.team:first-child {
+  border-right: 5px solid #303030;
+}
+
+.team:last-child {
+  border-left: 5px solid #303030;
+}
+
+p {
+  align-self: center;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  padding-top: 5px;
+}
+
+.team .team__timeouts {
+  flex: 0 1 100%;
+  background-color: #000;
+  height: 20%;
+  align-self: flex-start;
+}
+
+.team .team__timeouts > * {
+  justify-content: flex-start;
+  margin-left: 13px;
+  width: 20px;
+  height: 5px;
+  background-color: #fff;
+}
+
+.team .team__name {
+  flex: 1 0 calc(100% - 14vw);
+  height: 80%;
+  display: flex;
+}
+
+#away {
+  background-color: #f58522;
+}
+
+#home {
+  background-color: #552084;
+}
+
+.team .team__score {
+  flex: 0 1 14vw;
+  height: 80%;
+  display: flex;
+  color: #000;
+  background-color: #fff;
+}
+
+.games-container {
+  flex: 0 1 40%;
+  height: 40%;
+}
+
+.games-container > * {
+  flex: 0 1 100%;
+  background-color: #333333;
+  border: 3px solid #000;
+  border-right: none;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.games-container > *:last-child {
+  border-right: 3px solid #000;
+}
+
+.container__img::before,
+.team__name::before,
+.team__score::before,
+.games-container > *::before{
+  content: "";
+  height: 55%;
+  position: absolute;
+  bottom: 0;
+  filter: brightness(55%) blur(2px);
+}
+
+.container__img::before {
+  background-color: rgba(55,55,55,0.2);
+  width: 100%;
+  left: 0;
+}
+
+.team__name::before {
+  background-color: rgba(55,55,55,0.4);
+  width: calc(100% - 14vw);
+  left: 0;
+}
+
+.team__score::before {
+  background-color: rgba(55,55,55,0.1);
+  width: 14vw;
+  right: 0;
+}
+
+.games-container > *::before {
+  background-color: rgba(55,55,55,0.5);
+  width: 100%;
+  left: 0;
+}
+
+
+#gameclock {
+  flex: 1 0 calc(28vw + 10px);
+  background-color: #000;
+}
+
+#shotclock {
+  background-color: #B10925;
+}
+
+.tnt {
+  box-sizing: border-box;
+  margin: 20px;
+}
