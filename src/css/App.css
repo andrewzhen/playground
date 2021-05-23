@@ -202,6 +202,9 @@ p {
   left: 0;
 }
 
+#quarter {
+  cursor: pointer;
+}
 
 #gameclock {
   flex: 1 0 calc(28vw + 10px);
